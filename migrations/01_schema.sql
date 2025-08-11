@@ -1,18 +1,18 @@
--- DROP TABLE users;
--- DROP TABLE property_reviews;
--- DROP TABLE guest_reviews;
--- -- DROP TABLE reservations;
--- -- DROP TABLE properties;
--- DROP TABLE rates;
+DROP TABLE users;
+DROP TABLE property_reviews;
+DROP TABLE guest_reviews;
+DROP TABLE reservations;
+DROP TABLE properties;
+DROP TABLE rates;
 
-/* CREATE TABLE property_reviews (
+CREATE TABLE property_reviews (
  id SERIAL PRIMARY KEY,
  guest_id INTEGER,
  property_id INTEGER,
  reservation_id INTEGER,
  rating SMALLINT,
  message TEXT
-); */
+);
 
 CREATE TABLE guest_reviews (
  id SERIAL PRIMARY KEY,
@@ -23,7 +23,7 @@ CREATE TABLE guest_reviews (
  message TEXT
 );
 
-/* CREATE TABLE users (
+CREATE TABLE users (
  id SERIAL PRIMARY KEY,
  name varchar(255),
  email varchar(255),
@@ -56,7 +56,7 @@ CREATE TABLE properties (
  post_code VARCHAR(255),
  active BOOLEAN
 );
- */
+
 CREATE TABLE rates (
   property_id Integer,
   cost_per_night INTEGER,
